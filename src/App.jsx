@@ -11,7 +11,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setToken } from "./Redux/auth/authSlice";
 
-  export const backendUrl = import.meta.env.VITE_BACKEND_URL
 
   const App = () => {
     const token = useSelector((state)=>state.auth.token)

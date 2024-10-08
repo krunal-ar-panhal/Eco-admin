@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { backendUrl } from '../App'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
@@ -17,7 +16,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            const response = await axios.post(`${backendUrl}/api/user/admin`, {
+            const response = await axios.post("/api/user/admin", {
                 email: email, 
                 password: password,
             });
